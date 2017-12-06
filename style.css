@@ -26,40 +26,13 @@
 		right: 0;
 		margin: auto;
 	}
-	/** WEATHER **/
-		.details {
-			background: #c2a5e7;
-			border-radius: 3px;
-			width: 180px;
-			height: 50px;
-			text-align: center;
-			position: absolute;
-			right: 20px;
-			top: 20px;
-		}
-		#weather {
-			line-height: 17px;
-		}
-		#description {
-			color: #FFF;
-			font-family: "Helvetica Rounded" !important;
-			font-size: 12pt;
-			text-transform: lowercase;
-			display: inline-block;
-		}
-		#temp_curr {
-			color: #FFF;
-			font-family: "Helvetica Rounded" !important;
-			font-size: 12pt;
-			padding-left: 2px;
-			display: inline-block;
-		}
+
 	/** SEARCH **/
 		.form {
 			text-align: right;
 			position: absolute !important;
-			top: 90px !important;
-			right: 0px !important;
+			top: 20px !important;
+			right: -5px !important;
 			margin: auto !important;
 			z-index: 9999 !important;
 		}
@@ -68,9 +41,9 @@
 			background-repeat: no-repeat;
 			background-position: left;
 			background-size: 27px auto;
-			padding: 16px 20px 16px 16px;
+			padding: 17px 20px 17px 16px;
 			width: 10px;
-			margin-left: -26px;
+			margin-left: -30px;
 		}
 		input {
 			background: #453744;
@@ -80,13 +53,9 @@
 			font-size: 10pt;
 			padding: 17px 20px;
 			text-align: left;
-			width: 180px;
+			width: 120px;
 			margin-right: 20px;
-			transition: .3s ease-in-out !important;
-		}
-		input:focus {
-			width: 300px;
-			transition: .3s ease-in-out !important;
+
 		}
 	/** SIDEBAR **/
 		.sidebar {
