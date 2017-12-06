@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	        <title>Home -- Welcome to the internet</title>
+	        <link rel="shortcut icon" type="image/png" href="icons/favicon.png"/>
+	        <link rel="stylesheet" type="text/css" href="style.css">
+	        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	        <script type="text/javascript">
+		        $(document).ready(function() {
+			$('.button').click(function(e) {
+				e.preventDefault();
+				setContent($(this));
+			});
+
+			$('.button.active').length && setContent($('.button.active'));
+
+			function setContent($el) {
+				$('.button').removeClass('active');
+				$('.box').hide();
+				$el.addClass('active');
+				$($el.data('rel')).show();
+			}
+		        });
+	        </script>
+	</head>
+
+	<body>
+	        	<div id="container">
+		              <div class="sidebar">
+		                              <div class="border"></div>
+		                              <button id="first-btn" class="button active" data-rel="#box1">01</button>
+			                              <div class="box" id="box1">
+			                                	<h1>Social</h1>
+						<a href="https://myanimelist.net/">MAL</a>
+						<a href="https://twitter.com/">Twitter</a>
+						<a href="https://www.youtube.com/feed/subscriptions">Youtube</a>
+						<a href="https://ninryu.deviantart.com/">Deviantart</a>
+						<a href="http://tvtropes.org/pmwiki/conversations.php?topic=0000000000000000000000d1">TVTropes</a>
+                                                                                    <a href="http://store.steampowered.com/">Steam</a>
+
+
+			                              </div>
+		                              <button id="second-btn" class="button" data-rel="#box2">02</button>
+			                              <div class="box" id="box2">
+			                                             <h1>Images</h1>
+						<a href="http://danbooru.donmai.us/">Danbooru</a>
+						<a href="https://www.pixiv.net/">Pixiv</a>
+						<a href="https://www.zerochan.net/">Zerochan</a>
+
+			                            </div>
+		                            <button id="third-btn" class="button" data-rel="#box3">03</button>
+			                            <div class="box" id="box3">
+			                                             <h1>Anime</h1>
+						<a href="https://animetosho.org/">Anime Tosho</a>
+						<a href="http://kissanime.ru/">Kiss Anime</a>
+						<a href="https://www.masterani.me/">Masterani</a>
+                                                                                    <a href="http://bato.to/">Batoto</a>
+                                                                                    <a href="https://dynasty-scans.com/">Dynasty</a>
+			                              </div>	                            
+		              </div>
+			      <div class="form">
+					<input  id="searchbox" name="q" type="text" autocomplete="off" class="cleardefault" maxlength="100"   placeholder="search engine ..." size="17" autofocus="autofocus" />
+					<input type="submit" id="image-button" value=""></input>
+			      </div>
+			<div class="details">
+				<div id="weather">
+					<h2 id="description"></h2>
+					<h3 id="temp_curr"></h3>
+				</div> 
+			</div>
+	        </div>
+	</body>
+	<script type="text/javascript" src="js/search.js"></script>
+  	<script src="js/weather.js"></script>
+</html>
